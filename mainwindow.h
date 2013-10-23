@@ -38,8 +38,15 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+    void on_pushButton_2_clicked();
+
+    void on_lcdNumber_overflow();
+
+    void on_pushButton_3_clicked();
+
 private:
     Ui::MainWindow *ui;
+    int count;
 };
 
 #endif // MAINWINDOW_H

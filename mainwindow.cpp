@@ -7,6 +7,10 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    this->connect(this->ui->pushButton_2, SIGNAL(clicked()), this,SLOT(on_pushButton_2_clicked()));
+    this->connect(this->ui->pushButton_3, SIGNAL(clicked()), this,SLOT(on_pushButton_3_clicked()));
+    this->count=0;
+    this->ui->lcdNumber->display(count);
 }
 
 MainWindow::~MainWindow()
@@ -18,5 +22,23 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked()
 {
     std::cout << "pushbutton " << std::endl;
+}
+
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    count++;
+    this->ui->lcdNumber->display(count);
+    //std::cout << "increment by 1" << std::endl;
+}
+
+void MainWindow::on_lcdNumber_overflow()
+{
+
+}
+void MainWindow::on_pushButton_3_clicked()
+{
+    count--;
+    this->ui->lcdNumber->display(count);
 }
 
