@@ -1,11 +1,11 @@
 /**
 * @file
-* @author Luc Renambot
+* @author Hardik Prajapati
 * @version 1.0
 * @section LICENSE
-*  blah blah
+*  HNP (R)
 * @section DESCRIPTION
-*  blah blah blah
+*  A program that increments and decrements to the LCD
 */
 
 #ifndef MAINWINDOW_H
@@ -35,7 +35,15 @@ public:
     MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+
+
+
 private slots:
+    /**
+     * 3 Buttons for MainWindow and 1 LCD to display result
+     *
+     * @param parent a parent widget, can be null
+     */
     void on_pushButton_clicked();
 
     void on_pushButton_2_clicked();
@@ -46,7 +54,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    int count;
+    int count; /*!< an integer value */
 };
 
 #endif // MAINWINDOW_H

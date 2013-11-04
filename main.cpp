@@ -1,3 +1,7 @@
+/*
+ * Main program that has Mainwindow w, and display it
+ *
+ */
 #include "mainwindow.h"
 #include <QApplication>
 
